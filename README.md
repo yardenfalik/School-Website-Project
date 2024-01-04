@@ -1,6 +1,6 @@
 # School-Website-Project
 
-Welcome to School-Website-project! This project is a website that I've built for a school project. The server is written in Python using the Flask library
+Welcome to School-Website-project! This project is a website that I've built for a school project. The server is written in Python using the Flask library and for the database SQLite.
 
 ## Installation
 To run this project locally, follow these steps:
