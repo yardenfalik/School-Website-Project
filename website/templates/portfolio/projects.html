@@ -1,0 +1,69 @@
+{% extends "base.html" %} 
+{% block title %}Works{% endblock %}
+{% block css %}lightmode.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+  <div id="blob" class="gl-back"></div>
+  <div id="blur" class="gl-front"></div>
+    <header>
+      <a class="logo" href="/"><img src="static/img/YARDENFALIK2.png" height="45.5" width="410"></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="/contact"><button>Contact</button></a>
+     </header>
+
+     <main>
+      <div class="card">
+        <img src="static/img/tt-card.png" alt="">
+        <div class="card-over">
+          <a href="https://the-good-guy.itch.io/together-time"><h2>Together Time</h2></a>
+          <p>with <a href="/tgg">TGG</a></p>
+        </div>
+      </div>
+     </main>
+
+     <!-- <div class="games">
+     <iframe frameborder="0" src="https://itch.io/embed/929163?linkback=true&amp;border_width=5&amp;dark=true" width="560" height="175"><a href="https://the-good-guy.itch.io/together-time">together time by tgg</a></iframe>
+     <br>
+     <a href="/tgg"><button style="text-align: center; margin: auto;">Tgg!</button></a>
+    </div> -->
+
+
+  <script>
+    // Get the follower div
+var follower = document.getElementById("blob");
+
+// Set the delay in milliseconds
+var delay = 100;
+
+// Initialize the position of the follower
+var posX = 0;
+var posY = 0;
+
+// Add an event listener for mouse movement
+document.addEventListener("mousemove", function(event) {
+  // Get the current mouse position
+  var mouseX = event.clientX;
+  var mouseY = event.clientY;
+
+  // Set the new position of the follower with a delay
+  setTimeout(function() {
+    posX += (mouseX - posX) / 10;
+    posY += (mouseY - posY) / 10;
+    follower.style.left = posX + "px";
+    follower.style.top = posY + "px";
+    console.log(follower.style.top);
+    console.log("mouse - " + mouseY);
+  }, delay);
+});
+
+
+
+  </script>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %} 
+{% block title %}ירדן פליק | Yarden Falik{% endblock %}
+{% block css %}portIndex.css{% endblock %}
+{% block color %}#1ABC9C{% endblock %}
+
+{% block body %}
+    <div id="hebrew" class="data">
+        <h1>ירדן פליק</h1>
+        <nav>
+            <a onclick="changeLen()" style="cursor: pointer;"><b>English</b></a>
+            <a href="/"><b>ראשי</b></a>
+            <a href="/projects"><b>עבודות</b></a>
+            <a href="/blog"><b>בלוג</b></a>
+            <a href="/tools"><b>כלים</b></a>
+            <a href="https://twitter.com/YardenFalik"><b>טוויטר</b></a>
+            <a href="https://github.com/YardenFalik"><b>גיטהאב</b></a>
+            <a href="https://open.spotify.com/user/nobbe06n8xt2uo22yvdggbfhh?si=CI6uLIvmTsq7ebWNHTX9Gw"><b>ספוטיפיי</b></a>
+        </nav>
+    </div>
+
+    <div id="english" class="data">
+        <h1>Yarden Falik</h1>
+        <nav>
+            <a onclick="changeLen()" style="cursor: pointer;"><b>עברית</b></a>
+            <a href="/"><b>Home</b></a>
+            <a href="/projects"><b>Projects</b></a>
+            <a href="/blog"><b>Blog</b></a>
+            <a href="/tools"><b>Tools</b></a>
+            <a href="https://twitter.com/YardenFalik"><b>Twitter</b></a>
+            <a href="https://github.com/YardenFalik"><b>GitHub</b></a>
+            <a href="https://open.spotify.com/user/nobbe06n8xt2uo22yvdggbfhh?si=CI6uLIvmTsq7ebWNHTX9Gw"><b>Spotify</b></a>
+        </nav>
+    </div>
+    <script src="static/app.js"></script>
+{% endblock %}

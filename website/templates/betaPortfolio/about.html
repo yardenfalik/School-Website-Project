@@ -1,0 +1,57 @@
+{% extends "base.html" %} 
+{% block title %}About{% endblock %}
+{% block css %}yemima.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+    <header>
+      <a class="logo" href="/"><img src="static/img/yemima.png" height="100px" width="100px"></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/games">Games</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="/contact"><button>Contact</button></a>
+     </header>
+   <div id="content">
+     <div class="container">
+       <div class="about">
+         <div class="about-author">
+         </div>
+
+         <h1 class="about-title">About Me</h1>
+         <div class="about-content">
+           <h3>Hi!</h3>
+           <p>My name is Yarden, I'm 17 year old. I'm a programmer, editor and indie game developer.</p>
+           <p>I know a lot of programming languages: C#, JS, Java, C, C++, Python, HTML, and CSS.</p>
+           <p>I edit in After Effect, Premiere Pro, and I'm doing color correction on DaVinci Resolve</p>
+        </div> <!--about-content-->
+       </div> <!--about-->
+      </div>
+    </div>
+    
+   <footer>
+    <div class="container">
+      <div class="column">
+        <h4>social</h4>
+        <p>
+          <a href="https://www.instagram.com/yardenfalik/">Instagram</a>
+          <br>
+          <a href="https://twitter.com/yardenfalik">Twitter</a>
+          <br>
+          <a href="https://github.com/yardenfalik">Github</a>
+          <br>
+          <a href="https://www.facebook.com/yardenfalik">Facebook</a>
+        </p>
+      </div>
+      <div class="column">
+        <h4>Me</h4>
+        <p>full-stack developer</p>
+        <p>indie game developer</p>
+        <p>C#, Python, java, C, java, C, JS, CSS, HTML also im Editor and Designer</p>
+      </div>
+    </div>
+   </footer>
+{% endblock %}

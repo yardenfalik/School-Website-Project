@@ -1,0 +1,53 @@
+{% extends "base.html" %} 
+{% block title %}portfolio{% endblock %}
+{% block css %}betaPortfolio.css{% endblock %}
+{% block color %}#000536{% endblock %}
+
+{% block body %}
+   <header>
+    <a class="logo" href="/"><img src="static/img/logo2.png"></a>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="/404">WORKS</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/404">GAMES</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="/404"><button>Contact</button></a>
+   </header>
+
+  <section id="start" class="start">
+    <h1 class="hi_myname">Hi, I am Yarden</h1>
+    <h1 class="skills">full-stack developer, indie game developer.</h1>
+    <br>
+    <div class="go">
+      <a href="#middle"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </section>
+
+  <section id="middle" class="middle">
+   <h1 class="about-title">ABOUT</h1>
+   <div class="about-content">
+      <p>My name is Yarden, I'm 16 year old. I'm a programmer, editor and indie game developer.</p>
+      <p>I know a lot of programming languages: C#, JS, java, C, Python, HTML, and CSS.</p>
+      <p>I edit in After Effect, Premiere Pro, and I'm doing color correction on DaVinci Resolve</p>
+    </div> <!--about-content-->
+  </section>
+
+  <div class="copyright">
+    © copyright 2022 Yarden Falik
+  </div>
+  <div class="social">
+    <ul>
+    <li><a href="https://www.instagram.com/yardenfalik"><i class="fab fa-instagram"></i></a></li>
+
+    <li><a href="https://twitter.com/yardenfalik"><i class="fab fa-twitter"></i></a></li>
+    
+    <li><a href="https://github.com/yardenfalik"><i class="fab fa-github"></i></a></li>
+    
+    <li><a href="https://www.facebook.com/yardenfalik"><i class="fab fa-facebook"></i></a></li>
+  </ul>
+  </div>
+
+  <script src="https://kit.fontawesome.com/3c881cfa4c.js" crossorigin="anonymous"></script>
+{% endblock %}

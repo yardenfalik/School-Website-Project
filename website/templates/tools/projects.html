@@ -1,0 +1,39 @@
+{% extends "base.html" %} 
+{% block title %}Projects Essentials{% endblock %}
+{% block css %}essentials.css{% endblock %}
+{% block color %}#CF53CB{% endblock %}
+
+{% block body %}
+<h1 align="center" class="essentials-h1"><img src="static/img/essentialsLogo.png" width="25px" height="25px"> Projects Essentials</h1>
+<h1 class="title-project">projects:</h1>
+<div class="cards">
+  {% for projects in projects %}
+  {% if projects.userId == current_user.id %}
+  <div class="card">
+    <h2>{{ projects.name }}</h2> 
+    <h3>{{ projects.subject }}</h3>
+    <p>{{ projects.description }}</p>
+
+    <div class="checkboxs">
+      {% if projects.notebook == 1 %}
+      <label class="container">
+        <a href="/notebook"><span><img height="20px" width="20px" src="static/img/notebook.png" alt=""></a></span>
+      </label>
+      {% endif %}
+
+      {% if projects.todo == 1 %}
+      <label class="container">
+        <a href="/to-do"><span><img height="20px" width="20px" src="static/img/todo.png" alt=""></a></span>
+      </label>
+      {% endif %}
+    </div>
+    <p>id: {{ projects.id }}</p>
+    <p>{{ projects.date }}</p>
+    <a href="deleteProject/{{ projects.id }}">Delete</a>
+  </div>
+  {% endif %}
+  {% endfor %}
+  <br>
+</div>
+<a href="/">HOME</a>
+{% endblock %}

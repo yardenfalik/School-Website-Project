@@ -1,0 +1,55 @@
+{% extends "base.html" %} 
+{% block title %}Dashboard{% endblock %}
+{% block css %}dashboard.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+
+<header>
+    <div class="some">
+      <a href="/dashboard"><h1>Explore:</h1></a>
+    </div>
+      <nav>
+          <ul class="nav_links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/logout">LOG OUT</a></li>
+          </ul>
+        </nav>
+</header>
+  
+  <div class="side-bar">
+    <div class="symb">
+      <a href="/dashboard"><i class="fa-solid fa-house"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/user/{{current_user.first_name}}"><i class="fa-solid fa-user"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/users"><i class="fa-solid fa-users"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/settings"><i class="fa-solid fa-gear"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    </div>
+  </div>
+  
+  <div class="admin-widgets">
+      <ul>
+        {% for our_user in our_users %}
+          {% if 1 == our_user.id %}
+            <li><img src="/pictures/{{ our_user.first_name }}" height="100px"><h3><a href="/user/{{ our_user.first_name }}" style="color: #FFD700;">{{ our_user.first_name }}</a></h3></li>
+          {% else %}
+            <li><img src="/pictures/{{ our_user.first_name }}" height="100px"><h3><a href="/user/{{ our_user.first_name }}">{{ our_user.first_name }}</a></h3></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+  </div>
+
+  <script src="https://kit.fontawesome.com/61e3cb1cad.js" crossorigin="anonymous"></script>
+{% endblock %}

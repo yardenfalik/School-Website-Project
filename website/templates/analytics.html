@@ -1,0 +1,60 @@
+{% extends "base.html" %} 
+{% block title %}Analytics{% endblock %}
+{% block css %}dashboard.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+<header>
+    <div class="some">
+      <a href="/dashboard"><h1><i class="fa-solid fa-chart-line"></i> Analytics</h1></a>
+    </div>
+      <nav>
+          <ul class="nav_links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/logout">LOG OUT</a></li>
+          </ul>
+        </nav>
+</header>
+  
+  <div class="side-bar">
+    <div class="symb">
+      <a href="/dashboard"><i class="fa-solid fa-house"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/user/{{current_user.first_name}}"><i class="fa-solid fa-user"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/users"><i class="fa-solid fa-users"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/analytics"><i class="fa-solid fa-chart-line"></i></a>    
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/settings"><i class="fa-solid fa-gear"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    </div>
+  </div>
+
+  <div class="widgets">
+    <div class="card">
+      <br>
+      <br>
+      <a href="/playlist_an"><button>Playlist</button></a>
+      <a href="/i_an"><button>Instegram</button></a>
+      <a href="/t_an"><button>Twitter</button></a>
+      <br>
+      <a href="/playlist_an"><button>Playlist</button></a>
+      <a href="/i_an"><button>Instegram</button></a>
+      <a href="/t_an"><button>Twitter</button></a>
+      <br>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %} 
+{% block title %}Dashboard{% endblock %}
+{% block css %}dashboard.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+
+<header>
+    <div class="some">
+      <a href="/dashboard"><h1>users:</h1></a>
+    </div>
+      <nav>
+          <ul class="nav_links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/logout">LOG OUT</a></li>
+          </ul>
+        </nav>
+</header>
+  
+  <div class="side-bar">
+    <div class="symb">
+      <a href="/dashboard"><i class="fa-solid fa-house"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/user/{{current_user.first_name}}"><i class="fa-solid fa-user"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/users"><i class="fa-solid fa-users"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/settings"><i class="fa-solid fa-gear"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    </div>
+  </div>
+  
+  <div class="admin-widgets">
+
+      {% for our_user in our_users %}
+      <div>
+        <h3>{{ our_user.id }}. <a href="/user/{{ our_user.first_name }}"> {{ our_user.first_name }}</a></h3>
+        <p>email: {{ our_user.email }}</p>
+        <p>id: {{ our_user.id }}</p>
+        <p>password: {{ our_user.password }}</p>
+        <a href="/deleteUser/{{ our_user.id }}"><button type="submit" class="submit">Delete User</button></a>
+      </div>
+      {% endfor %}
+  </div>
+
+  <script src="https://kit.fontawesome.com/61e3cb1cad.js" crossorigin="anonymous"></script>
+{% endblock %}

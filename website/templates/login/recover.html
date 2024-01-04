@@ -1,0 +1,35 @@
+{% extends "base.html" %} 
+{% block title %}recover{% endblock %}
+{% block css %}lightMode.css{% endblock %}
+
+{% block body %}
+   
+      <form method="post" class="login">
+         <input type="hidden" name="form-name" value="form1">
+         <h1><img src="static/img/Y.png" width="25px" height="25px"> recover password</h1>
+         <input type="email" id="email" name="email" placeholder="Email:">
+         <input onclick="chagestyle()" type="submit" class="submit" id="button1">
+         <br>
+         <input type="hidden" name="form-name" value="form2">
+         <input type="number" id="number" name="number" placeholder="6 digit code:" style="border-radius: 0 0 10px 10px;" hidden>
+         <input type="submit" class="submit" id="button2" hidden>
+         <br>
+         <a href="/login">LogIn</a>
+      </form>     
+   </div>
+
+   <script>
+      function chagestyle()
+      {
+         let button1 = document.getElementById("button1");
+         let button2 = document.getElementById("button2");
+         let email = document.getElementById("email");
+         let code = document.getElementById("number")
+
+         button1.style.display = "none";
+         button2.style.display = "block";
+         email.style.borderRadius = "10px 10px 0 0";
+         code.style.display = "block";
+      }
+   </script>
+{% endblock %}

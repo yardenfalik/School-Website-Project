@@ -1,0 +1,37 @@
+{% extends "base.html" %} 
+{% block title %}Notebook{% endblock %}
+{% block css %}notebook.css{% endblock %}
+{% block color %}#FFCC02{% endblock %}
+
+{% block body %}
+    <div class="essentials">
+        <h1>Notebook</h1>
+        
+        <div class="buttons">
+            <button onclick="document.execCommand('bold');">Bold</button>
+            <button onclick="document.execCommand('copy');">Copy</button>
+            <button onclick="document.execCommand('italic');">Italic</button>
+            <button onclick="document.execCommand('underline');">Underline</button>
+            <button onclick="document.execCommand('justifyLeft');">Left</button>
+            <button onclick="document.execCommand('justifyCenter');">Center</button>
+            <button onclick="document.execCommand('justifyRight');">Right</button>
+            <button onclick="changeFont()">Heading</button>
+        </div>
+        <br>
+        <div class="text" contenteditable="true" placeholder="type here..."></div>
+    </div>
+
+<script>
+function changeFont() {
+    document.execCommand("fontSize", false, "32");
+    var fontElements = document.getElementsByTagName("font");
+    for (var i = 0, len = fontElements.length; i < len; ++i) {
+        if (fontElements[i].size == "32") {
+            fontElements[i].removeAttribute("size");
+            fontElements[i].style.fontSize = "16px";
+            document.execCommand("fontSize", false, "16");
+        }
+    }
+}
+</script>
+{% endblock %}

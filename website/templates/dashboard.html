@@ -1,0 +1,100 @@
+{% extends "base.html" %} 
+{% block title %}Dashboard{% endblock %}
+{% block css %}dashboard.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+
+<header>
+  <div class="some">
+    <h1>Hello {{current_user.first_name}}</h1>
+  </div>
+    <nav>
+        <ul class="nav_links">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/logout">LOG OUT</a></li>
+        </ul>
+      </nav>
+</header>
+
+  <div class="side-bar">
+    <div class="symb">
+      <a href="/dashboard"><i class="fa-solid fa-house"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/user/{{current_user.first_name}}"><i class="fa-solid fa-user"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/users"><i class="fa-solid fa-users"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/settings"><i class="fa-solid fa-gear"></i></a>
+    </div>
+    <br>
+    <div class="symb-logout">
+      <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    </div>
+  </div>
+
+  <div class="widgets">
+    <div class="card">
+      <br>
+      <img src="static\img\athabasca-falls.png" height="200px">
+      <h1>A beautiful waterfall</h1>
+      <a href="https://en.wikipedia.org/wiki/Athabasca_Falls"><button>See More</button></a>
+    </div>
+
+    <div class="card">
+      <!--frinds card-->
+      <h1>friends:</h1>
+      {% set temp = 0 %}
+      {% for friend in friends %}
+      {% if friend.userId == current_user.id %}
+      <a href="/user/{{ friend.name }}"><h2>{{ friend.name }}</h2></a>
+      {% endif %}
+      {% endfor %}
+      <br>
+      <!--<button onclick='window.open("/addFriends", "", "width=500,height=250");'>Add Friends</button>-->
+      <br>
+    </div>
+
+    <div class="card">
+      <h1>Name: <br>{{current_user.first_name}}</h1>
+      <h1>email: <br>{{current_user.email}}</h1>
+      <h1>id: <br>{{current_user.id}}</h1>
+      <h1>password: <br>{{current_user.password}}</h1>
+    </div>
+
+    <div class="card">
+      <h1>Name: <br>{{current_user.first_name}}</h1>
+      <h1>email: <br>{{current_user.email}}</h1>
+      <h1>id: <br>{{current_user.id}}</h1>
+      <h1>password: <br>{{current_user.password}}</h1>
+    </div>
+
+    <div class="card">
+    </div>
+
+    <div class="card">
+      <h1>Picture:</h1>
+      <img src="/pictures/{{ current_user.first_name }}" height="150px">
+    </div>
+
+    <div class="card">
+    </div>
+  
+    <div class="card">
+      <h1>first_name: <br>{{current_user.first_name}}</h1>
+      <h1>email: <br>{{current_user.email}}</h1>
+      <h1>id: <br>{{current_user.id}}</h1>
+      <h1>password: <br>{{current_user.password}}</h1>
+    </div>
+  </div>
+
+  <a class="nav_links_set" href="/settings">SETTINGS</a>
+
+<script src="https://kit.fontawesome.com/61e3cb1cad.js" crossorigin="anonymous"></script>
+{% endblock %}

@@ -1,0 +1,410 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+html {
+  height: 100%;
+}
+
+.index {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+.error {
+  color: red;
+}
+
+.index a {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+body {
+  color: #555;
+  background-color: #24252A;
+  margin: 0;
+  font-family: 'Montserrat',sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+li, a, button {
+  font-weight: 500;
+  font-size: 16px;
+  color:#edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+  border-bottom: 1px solid transparent;
+}
+
+.nav__links li a:hover {
+  color: #1abc9c;
+  border-bottom: 1px solid #1abc9c;
+  padding-bottom: 5px;
+  font-size: 120%;
+}
+
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0,136,169,1);
+}
+
+.logo:hover{
+  filter: brightness(0.7);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 20px 0;
+  margin-top: auto;
+  
+}
+
+.column {
+  min-width: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+footer h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+footer p {
+  color: white;
+}
+footer a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1abc9c;
+}
+
+.post, .about, .contact {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.post-author {
+  color: #1abc9c;
+}
+
+.post-title {
+  color: #1abc9c;
+}
+
+.about-content, .contact-content {
+  color: #D2D2D2;
+}
+
+.post-content {
+  color: white;
+}
+
+.about, .contact {
+  text-align: center;
+}
+
+.post-author img, .about-author img, .contact-author img{
+  border-radius: 50%;
+}
+
+.post-author img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.post-author span {
+  margin-left: 16px;
+}
+
+.post-date {
+  color: #D2D2D2;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.post-container:nth-child(even) {
+background-color: #333333;
+}
+
+.contact-title, .about-title {
+  color: white;
+}
+
+.post-author img:hover {
+  filter: brightness(0.7);
+}
+
+.wrapper{
+  align-items: baseline;
+  justify-content: center;
+  
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #1abc9c;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #24252A;
+  border-left: 2px solid #1abc9c;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+.hi_myname {
+  text-align: center;
+  
+}
+
+.WRONG {
+  font-size: xx-large;
+  color: #1abc9c;
+  text-align: center;
+}
+
+.back-button {
+  margin-left: auto;
+}
+
+.post-title {
+  color: #1abc9c;
+}
+
+input {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #d1d1d1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+input:hover {
+  background-color: #a1a1a1;
+}
+
+.login {
+    margin: auto;
+    background-color: #edf0f1;
+    border-radius: 18px;
+    box-shadow: 0px 0px 10px 0px #17181b;
+    
+}
+
+.login h1 {
+  text-align: center;
+}
+
+.challenge {
+  background-color: #d1d1d1;
+  box-shadow: inset 0px 0px 5px 0px #17181b;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+  
+}
+
+.challenge input {
+  background-color: #17181b;
+  color: #d1d1d1;
+}
+
+.challenge a {
+  color: #17181b;
+}
+
+.postcomp {
+
+  color: #000000;
+  text-align: center;
+  margin: auto;
+}
+
+.postcomp p {
+  color: red;
+}
+
+.postcomp  a {
+  color: red;
+}
+
+.instagram { 
+  
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.postcomp h1 {
+  font-size: 1000%;
+}
+
+.submit {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: #edf0f1;
+}
+
+.submit:hover {
+  background-color: rgba(0,136,169,1);
+}
+
+.login a {
+color: #333333;
+margin-right: 20px;
+padding: 9px 25px;
+}
+
+.login a:hover {
+  color: #1abc9c;
+}
+
+.index {
+  background-color: #1abc9c;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.index a:hover {
+  color: #333333;
+}
+
+.index h1:hover {
+  color: #333333;
+}
+
+.form {
+  margin: auto;
+  background-color: #edf0f1;
+  border-radius: 18px;
+  box-shadow: 0px 0px 10px 0px #17181b;
+}
+
+.form h1 {
+  text-align: center;
+}
+
+.copyright {
+  color: rgb(184, 185, 185);
+  text-align: center;
+}
+
+.menu {
+  transition: all 0.3s ease 0s;
+  border-bottom: 1px solid transparent;
+  color: white;
+  text-align: right;
+}
+
+.menu a {
+  font-size: 550%;
+  transition: all 0.3s ease 0s;
+}
+
+.menu a:hover {
+  border-bottom: 1px solid #1abc9c;
+  padding-bottom: 5px;
+  font-size: 600%;
+}

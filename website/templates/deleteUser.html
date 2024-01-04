@@ -1,0 +1,62 @@
+{% extends "base.html" %} 
+{% block title %}Dashboard{% endblock %}
+{% block css %}dashboard.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+
+<header>
+    <div class="some">
+      <a href="/dashboard"><h1>Hello {{current_user.first_name}}</h1></a>
+    </div>
+      <nav>
+          <ul class="nav__links">
+            <li><a href="/awards">AWARDS</a></li>
+            <li><a href="/logout">LOG OUT</a></li>
+          </ul>
+        </nav>
+</header>
+  
+  <div class="side-bar">
+    <div class="symb">
+      <a href="/"><i class="fa-solid fa-house"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/dashboard"><i class="fa-solid fa-user"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/qr-code"><i class="fa-solid fa-qrcode"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/users"><i class="fa-solid fa-users"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/awards"><i class="fa-solid fa-award"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/settings"><i class="fa-solid fa-gear"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    </div>
+  </div>
+
+  <div class="widgets">
+    <div>
+      <h1>Delete User:</h1>
+      <form method="post">
+        <input type="text" name="inputId" id="inputId">
+        <input type="submit">
+      </form>
+    </div>
+
+  </div>
+
+  <script src="https://kit.fontawesome.com/61e3cb1cad.js" crossorigin="anonymous"></script>
+{% endblock %}

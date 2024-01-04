@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+{% block title %}Contact{% endblock %}
+{% block css %}lightmode.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+  <header>
+    <a class="logo" href="/"><img src="static/img/YARDENFALIK2.png" height="45.5" width="410"></a>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/projects">Projects</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="/contact"><button>Contact</button></a>
+  </header>
+
+  <div class="about">
+    <h1 class="contact-title">Contact Me</h1>
+    <div class="about-content">
+      <p>You can contact me on Twitter, Instagram, Facebook, or <a style="font-size: 100%; color: #1ABC9C;" href="mailto:yardenfalik@gmail.com">Gmail</a> for important things.</p>
+    </div> <!--contact-content-->
+  </div> <!--contact-->
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+{% block title %}Tools{% endblock %}
+{% block css %}lightMode.css{% endblock %}
+
+{% block body %}
+  <h1 class="toolsTitle">My Tools</h1>
+  <header style="padding: 0px 0px;">
+    <div onclick="window.location.href = '/essentials';" class="toolBox" style="background-color: #F1FAFA; color: #CF53CB; border-color: #CF53CB;">
+      <h1 align="center" class="essentials-h1"><img src="static/img/essentialsLogo.png" width="25px" height="25px"> Projects Essentials</h1>
+    </div>
+
+    <div onclick="window.location.href = '/notebook';" class="toolBox" style="background-color: #F6F6F4; color: #FFCC02; border-color: #FFCC02;">
+      <h1 align="center" class="essentials-h1"><img src="static/img/notebook.png" width="25px" height="25px"> Notebook</h1>
+    </div>
+
+    <div onclick="window.location.href = '/to-do';" class="toolBox" style="background-color: #F5F5F7; color: #1ABC9C; border-color: #1ABC9C;">
+      <h1 align="center" class="essentials-h1"><img src="static/img/todo.png" width="25px" height="25px"> ToDo List</h1>
+    </div>
+  </header>
+  <a href="/">HOME</a>
+{% endblock %}

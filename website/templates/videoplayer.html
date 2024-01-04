@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+{% block title %}Blog{% endblock %}
+{% block css %}lightmode.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+<h1>dsad</h1>
+<div class="videoplayer">
+    <video id="vid" width="540" src="../static/videos/Untitled.mp4"></video>
+    <div class="controls">
+        <div onclick="playPause()">sds</div>
+    </div>
+</div>
+
+<script>
+    var myVideo = document.getElementById("vid"); 
+
+    function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+    } 
+</script>
+{% endblock %}

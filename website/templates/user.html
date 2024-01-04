@@ -1,0 +1,40 @@
+{% extends "base.html" %} 
+{% block title %}{{ name }}{% endblock %}
+{% block css %}lightMode.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+{% block body %}
+<div>
+    <a onclick="history.go(-1)" style=" cursor: pointer; position: fixed; left: 10pt; top: 10pt; z-index: 10;"><i class="fa-solid fa-arrow-left fa-2xl"></i></a>
+    <img src="/pictures/{{ name }}" style="width: 100%; z-index: -10; top: 0; height: 150px; filter: blur(30px);">
+    <img src="/pictures/{{ name }}" class="profilePicture">
+    {% if current_user.id != oId and isFriend != 1 %}
+        <a href="/addFriend/{{ name }}"><button class="addBtn"><i class="fa-regular fa-plus fa-2xl"></i></button></a>
+    {% endif %}
+    {% if current_user.id != oId and isFriend == 1 %}
+        <a href="mailto:{{ email }}"><i class="fa-regular fa-envelope fa-2xl"></i></a>
+    {% endif %}
+    <h1>{{ name }}#{{ id }}</h1>
+</div>
+
+<h1>Friends:</h1>
+<div class="friends">
+    {% for f in friends %}
+        <div class="friend">
+            {% if oId == f.userId %}
+                <img src="/pictures/{{ f.name }}" class="profilePicture">
+                {% if 1 == f.friendId %}
+                    <a href="/user/{{ f.name }}"><h3 class="fname" style="color: #FFD700;">{{ f.name }}</h3></a>
+                {% else %}
+                    <a href="/user/{{ f.name }}"><h3 class="fname">{{ f.name }}</h3></a>
+                {% endif %}
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
+{% if current_user.id != oId and isFriend == 1 %}
+<a href="/deleteFriend/{{ name }}">remove friend</a>
+{% endif %}
+<br>
+<script src="https://kit.fontawesome.com/61e3cb1cad.js" crossorigin="anonymous"></script>
+{% endblock %}

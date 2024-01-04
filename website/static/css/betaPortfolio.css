@@ -1,0 +1,265 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.index {
+  color: #000536;
+  text-align: center;
+  font-size: 50px;
+}
+
+.error {
+  color: red;
+}
+
+.index a {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+body {
+  color: #555;
+  margin: 0;
+  font-family: 'Montserrat',sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+li, nav a {
+  font-weight: 500;
+  font-size: 16px;
+  color:#000536;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+header {
+  background-color: white;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+  border-bottom: 1px solid transparent;
+}
+
+.nav__links li a:hover {
+  font-size: 120%;
+  box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #000536;
+}
+
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #000536;
+  border: none;
+  font-size: 120%;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: #020b5e;
+  font-size: 120%;
+}
+
+.logo:hover{
+  filter: brightness(0.7);
+}
+
+p {
+  line-height: 1.5;
+}
+
+.hi_myname {
+  text-align: center;
+  color: #24252A;
+  font-size: 300%;
+  
+}
+
+::selection {
+  color: white;
+  background: #000536;
+}
+
+.about-content, .about-title {
+  text-align: center;
+  color: #000536;
+}
+
+.skills {
+  text-align: center;
+  color: #000536;
+}
+
+.start {
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.middle {
+  margin-top: 500px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+
+.social a {
+  text-decoration: none;
+  color: #000536;
+  font-size: 150%;
+}
+.social li{
+  display: inline-block;
+  list-style: none;
+  padding: 0px 5px;
+}
+
+.social {
+  position: fixed;
+  bottom: 0pt;
+  right: 0;
+}
+
+.social a:hover {
+  text-decoration: none;
+  color: #0005368c;
+  font-size: 150%;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  transition: all 0.3s ease 0s;
+}
+
+::-webkit-scrollbar:hover {
+  width: 10px;
+  transition: all 0.3s ease 0s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+  size: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00053633;
+  border-radius: 90px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 0pt;
+}
+
+.go a {
+  transition: all 0.3s ease 0s;
+  font-size: 50px;
+  color: #000536;
+  animation: move 2s ease-in-out infinite;
+}
+
+.go a:hover {
+  animation-play-state: paused;
+  font-size: 75px;
+  color: #000536;
+  animation-play-state: forwards;
+  animation: moveBack 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% {
+    font-size: 50px;
+  }
+  50% {
+    font-size: 60px;
+  }
+  100% {
+    font-size: 50px;
+  }
+}
+
+@keyframes moveBack {
+  0% {
+    font-size: 55px;
+  }
+  100% {
+    font-size: 50px;
+  }
+}
+
+.WRONG {
+  text-align: center;
+  margin-top: auto; display: inline-flex;
+}
+
+.WRONG p{
+  text-align: center;
+  font-size: 200%;
+  position: relative;
+  top: 0pt;
+  margin: auto;
+}
+
+.WRONG button {
+  background: #000536;
+  position: fixed;
+  border-radius: 54px;
+  right: 200pt;
+}
+
+.WRONG button:hover {
+  font-size: 90%;
+  background-color: #020b5e;
+}
+
+.imgd {
+  position: relative;
+  width: 1280px;
+  height: 500px;
+  bottom: 0px;
+  left: 0pt;
+  right: 0pt;
+}
+
+.logo404 {
+  margin-left: auto;
+}

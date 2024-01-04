@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+{% block title %}About{% endblock %}
+{% block css %}lightmode.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+    <header>
+        <a class="logo" href="/"><img src="static/img/YARDENFALIK2.png" height="45.5" width="410"></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="/contact"><button>Contact</button></a>
+     </header>
+
+  <div class="about">
+    <h1 class="about-title">About Me</h1>
+    <div class="about-content">
+      <p>I am Yarden, I'm 17 year old. I'm a programmer. <br>I know the programming languages: C#, JS, Java, C, C++, Python, HTML, and CSS.</p>
+    </div>
+  </div> <!--about-->
+{% endblock %}

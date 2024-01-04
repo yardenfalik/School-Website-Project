@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap');
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Space from this element (entire page) and others*/
+    padding: 0; /*space from content and border*/
+    border: solid #1ABC9C;
+    border-width: 10px;
+    overflow:hidden;
+    display:flex;
+    box-sizing: border-box;
+    font-family: 'Miriam Libre', sans-serif;
+    color: #ffffff;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Rathong_from_Zemathang2.jpg');
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+
+h1
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 75px;
+    text-align: center;
+    font-size: 10vw;
+}
+
+nav
+{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top: 150px;
+    padding-right: 75px;
+    text-align: center;
+    width: 100%;
+}
+
+nav a
+{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 27px;
+    margin-left: 50px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease 0s;
+}
+
+nav a:hover
+{
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 5px;
+}
+
+.data
+{
+    position: absolute;
+    margin-right: 60px;
+}
+
+.form
+{
+    backdrop-filter: blur(10px);
+    margin: auto;
+    background-color: #ffffff7c;
+    color: #303030;
+    border-radius: 18px;
+    padding: 40px 80px 40px 80px;
+}
+
+input
+{
+    border-radius: 10px;
+    border: none;
+    padding: 9px 25px;
+}
+
+button
+{
+    border-radius: 10px;
+    border: none;
+    padding: 9px 25px;
+}
+
+a
+{
+    text-align: center;
+    text-decoration: none;
+    color: #303030;
+    font-size: 15px;
+    border-bottom: 1px solid #303030;
+    transition: all 0.3s ease 0s;
+}
+
+a:hover
+{
+    border-bottom: 2px solid #303030;
+    padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 620px) 
+{
+    /* For mobile phones: */
+    nav {
+        width: 100%;
+        display: block;
+    }
+    nav a
+    {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    nav a:hover
+    {   
+        width: 100%;
+        display: block;
+    }
+}

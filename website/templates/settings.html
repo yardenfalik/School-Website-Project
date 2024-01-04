@@ -1,0 +1,86 @@
+{% extends "base.html" %} 
+{% block title %}Dashboard{% endblock %}
+{% block css %}dashboard.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+
+<header>
+    <div class="some">
+      <a href="/dashboard"><h1>Hello {{current_user.first_name}}</h1></a>
+    </div>
+      <nav>
+          <ul class="nav_links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/logout">LOG OUT</a></li>
+          </ul>
+        </nav>
+  </header>
+  
+  <div class="side-bar">
+    <div class="symb">
+      <a href="/dashboard"><i class="fa-solid fa-house"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/user/{{current_user.first_name}}"><i class="fa-solid fa-user"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/users"><i class="fa-solid fa-users"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/settings"><i class="fa-solid fa-gear"></i></a>
+    </div>
+    <br>
+    <div class="symb">
+      <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    </div>
+  </div>
+
+  <div class="widgets">
+    <form method="post" enctype="multipart/form-data">
+      <h1>Update your profile</h1>
+      <h3>new password:</h3>
+      <input type="password" id="newPassword" name="newPassword">
+
+      <h3>Profile Picture:</h3>
+      <br>
+      <br>
+      <label for="imageUpload" class="uploadImage" id="uploadImage" name="uploadImage">
+        <i class="fa-solid fa-cloud-arrow-up"></i> Upload A Picture
+      </label>
+      <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" id="picture" name="picture" onchange="upload()"/>
+      <p id="demo"></p>
+      <br>
+      <br>
+      <button style="padding: 9px 108px;" type="submit" class="submit">Update</button>
+    </form>
+  </div>
+
+  
+
+  <h1 style="color: red;">━━━━━━━━━━━━━ Danger Zone ━━━━━━━━━━━━━</h1>
+
+  <div class="widgets">
+    <div method="post"> 
+      <h1>Delete account: <a href="/delete"><button type="submit" class="submit">Delete</button></a></h1>
+    </div>
+  </div>
+
+  <script>
+    function upload()
+    {
+      let butt = document.getElementById("uploadImage");
+      var fileButton = document.getElementById("imageUpload");
+      var tx = document.getElementById("demo");
+
+      butt.style.display = "none";
+      var str = fileButton.value;
+      tx.innerHTML = str.replace("C:\\fakepath\\", "");
+    }  
+    </script>
+
+  <script src="https://kit.fontawesome.com/61e3cb1cad.js" crossorigin="anonymous"></script>
+{% endblock %}

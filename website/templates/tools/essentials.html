@@ -1,0 +1,47 @@
+{% extends "base.html" %} 
+{% block title %}Projects Essentials{% endblock %}
+{% block css %}essentials.css{% endblock %}
+{% block color %}#CF53CB{% endblock %}
+
+{% block body %}
+    <form method="post" class="login">
+        <h1 align="center" class="essentials-h1"><img src="static/img/essentialsLogo.png" width="25px" height="25px"> Projects Essentials</h1>
+        <br>
+        <input type="text" placeholder="Projects Name:" class="name" id="name" name="name">
+        
+        <select class="subject" id="subject" name="subject">
+            <option selected disabled>Subject</option>
+            <option value='Science'>Science</option>
+            <option value='Programming'>Programming</option>
+            <option value='Math'>Math</option>
+            <option value='English'>English</option>
+            <option value='History'>History</option>
+            <option value='physics'>physics</option>
+        </select>
+
+        <br>
+        <br>
+        <h4>Select your tools</h4>
+        <div class="checkboxs">
+            <label class="container">
+                <input type="checkbox" name="notebook" id="notebook" value="1">
+                <span class="checkmark"><img height="20px" width="20px" src="static/img/notebook.png" alt=""> <br> Notebook</p></span>
+            </label>
+            
+            <label class="container">
+                <input type="checkbox" name="todo" id="todo" value="1">
+                <span class="checkmark"><img height="20px" width="20px" src="static/img/todo.png" alt=""> <br> Todo_list</p></span>        
+            </label>
+
+        </div>
+
+
+
+        <input type="text" placeholder="description:" name="description" id="description" class="description">
+
+        <input type="submit" class="submit" value="create">
+        <br>
+        <br>
+        <a href="/projects-index">PROJECTS</a>
+    </form>
+{% endblock %}

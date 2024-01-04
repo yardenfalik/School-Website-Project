@@ -1,0 +1,13 @@
+{% extends "base.html" %} 
+{% block title %}404{% endblock %}
+{% block css %}lightmode.css{% endblock %}
+{% block color %}#000536{% endblock %}
+
+{% block body %}
+  <a class="logo404" href="/"><img src="../static/img/logo2.png"></a>
+  <div class="WRONG">
+    <p>SOMETHING WENT WRONG...</p>
+    <button onclick="history.go(-1)">Back</button>
+   </div>
+   <img src="../static/img/404.png" alt="" class="imgd">
+{% endblock %}

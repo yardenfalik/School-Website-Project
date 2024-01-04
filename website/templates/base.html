@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href= "../static/css/{% block css %}{% endblock %}">
+    <link rel="icon" href="static/img/favicon.ico">
+    <meta name="theme-color" content="{% block color %}{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %} 
+    {% for category, message in messages %} 
+    {% if category == 'error' %}
+    <div class="alert" style="background-color: white; z-index: 10;" role="alert">
+    {{ message }}
+    </div>
+    {% else %}
+    <div class="alert" style="background-color: white; z-index: 10;" role="alert">
+    {{ message }}
+
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="container">{% block content %} {% endblock %}</div>
+
+    {% block body %}{% endblock %}
+    <div class="copyright" style="z-index: 10; color: #818181; text-align: center; position: fixed; bottom: 0pt; text-decoration: none;">
+      © copyright 2023 <a style="color: #818181; text-align: center; text-decoration: none;" href="https://yardenfalik.github.io"> Yarden Falik</a>
+    </div>
+    <script src="https://kit.fontawesome.com/61e3cb1cad.js" crossorigin="anonymous"></script>
+    <script src="../static/js/app.js"></script>
+
+</body>
+</html>

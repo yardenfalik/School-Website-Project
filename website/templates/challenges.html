@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+{% block title %}Challenges{% endblock %}
+{% block css %}lightMode.css{% endblock %}
+
+{% block body %}
+   <div class="WRONG1">
+    <h1>Challenges</h1>
+    
+    <button onclick="showfunction()">challenge 1</button>
+
+    <div id="challenge" class="challenge">
+        <h3>Instructions:</h3>
+        <h4>closed</h4>
+        <p>1. You need to find a 6-digit code.</p>
+        <p>2. You can't search on the webside code.</p>
+        <a href="challenges/challenges1">to start press here!</a>
+        <br>
+        <p>Enter the code:</p>
+        <input type="text" id="won">
+        <button onclick="wonfunction()">submit</button>
+    </div>
+    <br>
+
+  <button onclick="showfunction2()">challenge 2</button>
+
+  <div id="challenge2" class="challenge">
+      <h3>Instructions:</h3>
+      <p>1. You can't search on the webside code.</p>
+      <a href="/challenge2/a902849238jjdkfnjjhhsv89e98wrnu9w8ururw09wu4nw404y53uierotnv8e9y498434jetn89u48rteto94woeiru98494tnvpetj0489te94thp849.html">to start press here!</a>
+  </div>
+  <br>
+
+    <a href="/">Home</a>
+   </div>
+
+   <script src="../static/js/scriptChallenge.js"></script>
+  
+{% endblock %}

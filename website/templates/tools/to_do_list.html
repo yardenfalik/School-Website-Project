@@ -1,0 +1,47 @@
+{% extends "base.html" %} 
+{% block title %}To Do List{% endblock %}
+{% block css %}lightMode.css{% endblock %}
+
+
+{% block body %}
+    <a class="logo" href="/"><img src="static/img/logo.png"></a>
+    <div class="challenge" style="margin: auto;">
+        <h1 class="header">My to do list</h1>
+        <p>Double-click an item to mark it complete.</p>
+        <input type="text" name="" id="one">
+        <button class="addbutton" onclick="addFunction()">Add</button>
+
+        <ol id="list"></ol>
+
+        <button id="clearbutton" class="clearbutton" hidden>Clear complete</button>
+        <button class="emptybutton" onclick="removeAll()">Empty List</button>
+
+    </div>
+    
+        <script>
+            var i = 0;
+            function addFunction() {
+                var one = document.getElementById("one").value;
+                var li = document.createElement("li");
+                var node = document.createTextNode("    " + one);
+                li.appendChild(node);
+                li.setAttribute("onclick", "markAsDone(" + i + ")");
+                li.setAttribute("id", i);
+                document.getElementById("list").appendChild(li)
+                document.getElementById('one').value = ''
+                document.getElementById('clearbutton').style.display = "none";
+                i += 1;
+            }
+            function removeAll() {
+                document.getElementById("list").innerHTML = "";
+                flash("Clear complete");
+            }
+
+            function markAsDone(id) {
+                document.getElementById(id).style.backgroundColor = "#d1d1d1";
+                document.getElementById(id).style.textDecoration = "line-through";
+            }
+
+        </script>
+        
+{% endblock %}

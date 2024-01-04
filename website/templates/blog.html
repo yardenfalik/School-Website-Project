@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+{% block title %}Blog{% endblock %}
+{% block css %}lightmode.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+   <header>
+    <a class="logo" href="/"><img src="static/img/YARDENFALIK2.png" height="45.5" width="410"></a>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/projects">Projects</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="/contact"><button>Contact</button></a>
+   </header>
+
+    {% if current_user.id == 1 %}
+    <a onclick="showFunction()" style="cursor: pointer;">Show/Hide</a>
+      <form method="POST" style="margin-left: 2%;" id="box">
+        <textarea name="note" id="note" style="resize: none;height: 300px;width: 800px;"></textarea>
+        <button type="submit">Post</button>
+      </form>
+    {% endif %}
+
+      {% for note in notes %}
+        <div class="post">
+          <p>{{ note.data }}</p>
+          <date><i>{{ note.date }}</i></date>
+          {% if current_user.id == 1 %}
+          <p>id - {{ note.id }} # id visible for admin only.</p>
+          {% endif %}
+        </div>
+        <br>
+        <p>-----------------------------------------------------------------------</p>
+        <br>
+      {% endfor %}
+
+      {% if current_user.id == 1 %}
+        <a href="/deletePost">Delete Post</a>
+      {% endif %}
+      <br>
+{% endblock %}

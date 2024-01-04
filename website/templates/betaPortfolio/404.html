@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+{% block title %}Yarden Falik{% endblock %}
+{% block css %}yemima.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+<header>
+  <a class="logo" href="/"><img src="static/img/yemima.png" height="100px" width="100px"></a>
+  <nav>
+    <ul class="nav__links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/games">Games</a></li>
+    </ul>
+  </nav>
+  <a class="cta" href="/contact"><button>Contact</button></a>
+ </header>
+   <div class="WRONG">
+    <header class="o4">ERROR 4<img src="static/img/yemima.png" alt="IDK"width="80">4</header>
+    <h3>Oops... SOMETHING WENT WRONG...</h3>
+    <button onclick="history.go(-1)">Back</button>
+   </div>
+  </body>
+</html>
+{% endblock %}

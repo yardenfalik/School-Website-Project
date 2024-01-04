@@ -1,0 +1,50 @@
+{% extends "base.html" %} 
+{% block title %}Yarden Falik{% endblock %}
+{% block css %}yemima.css{% endblock %}
+{% block color %}#1abc9c{% endblock %}
+
+{% block body %}
+   <header>
+    <a class="logo" href="/"><img src="static/img/yemima.png" height="100px" width="100px"></a>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/games">Games</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="/contact"><button>Contact</button></a>
+   </header>
+   <h1 class="hi_myname">Hi, I am Yarden</h1>
+   <div class="wrapper">
+    <div class="static-txt">I'm a</div>
+    <ul class="dynamic-txts">
+      <li><span>Programmer</span></li>
+      <li><span>Editor</span></li>
+      <li><span>Developer</span></li>
+      <li><span>Student</span></li>
+    </ul>
+   </div>
+   <footer>
+    <div class="container">
+      <div class="column">
+        <h4>social</h4>
+        <p>
+          <a href="https://www.instagram.com/yardenfalik">Instagram</a>
+          <br>
+          <a href="https://twitter.com/yardenfalik">Twitter</a>
+          <br>
+          <a href="https://github.com/yardenfalik">Github</a>
+          <br>
+          <a href="https://www.facebook.com/yardenfalik">Facebook</a>
+        </p>
+      </div>
+      <div class="column">
+        <h4>Me</h4>
+        <p>full-stack developer</p>
+        <p>indie game developer</p>
+        <p>C#, Python, java, C, JS, CSS, HTML also im Editor and Designer</p>
+      </div>
+    </div>
+   </footer>
+{% endblock %}
